@@ -1,0 +1,10 @@
+# Copyright (c) 2026 badjeff
+# SPDX-License-Identifier: Apache-2.0
+
+if CHARGER
+
+rsource "Kconfig.bq2518x"
+rsource "Kconfig.bq2518x_gpio"
+rsource "Kconfig.bq25186_bas"
+
+endif # ADC

@@ -1,0 +1,23 @@
+# Copyright 2026 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: |
+  Virtual GPIO controller child node utilizing the GPO open-drain pin 
+  on the TI BQ2518x linear charger.
+
+compatible: "ti,bq2518x-gpio"
+
+include: [gpio-controller.yaml, base.yaml]
+
+properties:
+  gpio-controller:
+    required: true
+
+  "#gpio-cells":
+    type: int
+    required: true
+    const: 2
+
+gpio-cells:
+  - pin
+  - flags

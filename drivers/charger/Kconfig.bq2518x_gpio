@@ -1,0 +1,12 @@
+# Copyright 2026 badjeff
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config CHARGER_BQ2518X_GPIO
+	bool "BQ2518X Battery Charger PG/GPO Pin GPIO Brigde"
+	default y
+	depends on DT_HAS_TI_BQ2518X_GPIO_ENABLED
+	depends on GPIO
+	select CHARGER_BQ2518X
+	help
+	  Expose BQ2518X battery charger GPO Pin.

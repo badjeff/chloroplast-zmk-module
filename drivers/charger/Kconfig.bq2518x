@@ -1,0 +1,16 @@
+# Copyright 2024 Google LLC
+# Copyright 2026 badjeff
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config CHARGER_BQ2518X
+	bool "BQ2518x Battery Charger"
+	default y
+	depends on DT_HAS_TI_BQ25186_ENABLED
+	select I2C
+	help
+	  Enable BQ2518x battery charger driver.
+
+config CHARGER_BQ2518X_MODE_INT_SIG
+	bool "Use Interrupt Indicator pin for signal"
+	default y

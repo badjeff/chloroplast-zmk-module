@@ -1,0 +1,13 @@
+file_format: "1"
+id: chloroplast//zmk
+name: chloroplast
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://github.com/badjeff/chloroplast-pcb/
+exposes: [pro_micro]
+revisions:
+  - "1.0.0"
+default_revision: "1.0.0"

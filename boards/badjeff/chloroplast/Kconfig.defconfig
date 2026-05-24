@@ -1,0 +1,34 @@
+# Electronut Labs Papyr board configuration
+
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if BOARD_CHLOROPLAST
+
+config BOARD
+    default "chloroplast"
+
+if USB_DEVICE_STACK
+
+config USB_NRFX
+    default y
+
+endif # USB_DEVICE_STACK
+
+config BT_CTLR
+    default BT
+
+config CHARGER
+    default y
+
+if BT
+
+config BT_BAS
+    default y
+
+config BT_BAS_BLS
+    default y
+
+endif # BT
+
+endif # BOARD_CHLOROPLAST

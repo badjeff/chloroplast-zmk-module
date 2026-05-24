@@ -1,0 +1,17 @@
+# Copyright 2026 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: |
+  BQ25186 I2C Controlled Battery Charger BAS Integration.
+
+compatible: "ti,bq25186-bas"
+
+properties:
+  charger-device:
+    type: phandle
+    required: true
+    description: BQ25186 device to monitor
+  irq-gpios:
+    type: phandle-array
+    required: true
+    description: Data ready gpio, INT pin on BQ25186

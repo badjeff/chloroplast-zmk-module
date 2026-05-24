@@ -1,0 +1,14 @@
+# Copyright 2026 badjeff
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config CHARGER_BQ25186_BAS
+	bool "BQ25186 Battery Charger BAS Integration"
+	default y
+	depends on DT_HAS_TI_BQ25186_BAS_ENABLED
+	depends on BT
+	depends on BT_BAS
+	depends on BT_BAS_BLS
+	select CHARGER_BQ2518X
+	help
+	  Enable BQ25186 battery charger driver BAS integration.
