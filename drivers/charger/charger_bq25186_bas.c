@@ -84,13 +84,13 @@ static void bq25186_bas_work_handler(struct k_work *work) {
     if (led_ready) {
         switch (val.status) {
             case CHARGER_STATUS_CHARGING:
-                LOG_INF("set charging status led: ON");
+                LOG_DBG("set charging status led: ON");
                 bq25186_bas_set_status_led(dev, true);
                 break;
             case CHARGER_STATUS_NOT_CHARGING:
             case CHARGER_STATUS_FULL:
             default:
-                LOG_INF("set charging status led: OFF");
+                LOG_DBG("set charging status led: OFF");
                 bq25186_bas_set_status_led(dev, false);
                 break;
         }
@@ -99,19 +99,19 @@ static void bq25186_bas_work_handler(struct k_work *work) {
 #if IS_ENABLED(CONFIG_BT_BAS_BLS)
     switch (val.status) {
         case CHARGER_STATUS_CHARGING:
-            LOG_INF("set BAS charging state: CHARGING");
+            LOG_DBG("set BAS charging state: CHARGING");
             bt_bas_bls_set_battery_charge_state(BT_BAS_BLS_CHARGE_STATE_CHARGING);
             break;
         case CHARGER_STATUS_NOT_CHARGING:
-            LOG_INF("set BAS charging state: DISCHARGING");
+            LOG_DBG("set BAS charging state: DISCHARGING");
             bt_bas_bls_set_battery_charge_state(BT_BAS_BLS_CHARGE_STATE_DISCHARGING_ACTIVE);
             break;
         case CHARGER_STATUS_FULL:
-            LOG_INF("set BAS charging state: FULL");
+            LOG_DBG("set BAS charging state: FULL");
             bt_bas_bls_set_battery_charge_state(BT_BAS_BLS_CHARGE_STATE_DISCHARGING_ACTIVE);
             break;
         default:
-            LOG_INF("set BAS charging state: UNKNOWN");
+            LOG_DBG("set BAS charging state: UNKNOWN");
             bt_bas_bls_set_battery_charge_state(BT_BAS_BLS_CHARGE_STATE_UNKNOWN);
             break;
     }
