@@ -27,11 +27,4 @@
         output-ohms = <2000000>;
         full-ohms = <(2000000 + 820000)>;
     };
-    // vbatt: vbatt {
-    //     compatible = "zmk,battery-nrf-vddh";
-    // };
-};
-
-&adc {
-    status = "okay";
 };

@@ -1,0 +1,11 @@
+file_format: "1"
+id: chloroplast-zmk-module
+name: chloroplast-zmk-module
+type: shield
+url: https://github.com/badjeff/chloroplast-zmk-module/
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+siblings:
+  - chlorokun  

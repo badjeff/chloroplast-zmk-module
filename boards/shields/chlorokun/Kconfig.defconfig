@@ -1,0 +1,6 @@
+if SHIELD_CHLOROKUN
+
+config ZMK_KEYBOARD_NAME
+    default "CHLOROKUN"
+
+endif
