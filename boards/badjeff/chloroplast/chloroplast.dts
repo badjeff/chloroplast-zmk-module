@@ -36,7 +36,16 @@
     };
 };
 
+&reg0 {
+    /* original node in <nordic/nrf52840_qiaa.dtsi> */
+    /* high voltage DCDC on DCCH rail */
+    status = "okay"; /* okay to enable DCDC mode */
+};
+
 &reg1 {
+    /* original node in <nordic/nrf52840.dtsi> */
+    /* enable DCDC for internal 1.8V regulator DCC rail embedded in E73 module */
+    // compatible = "nordic,nrf5x-regulator";
     regulator-initial-mode = <NRF5X_REG_MODE_DCDC>;
 };
 

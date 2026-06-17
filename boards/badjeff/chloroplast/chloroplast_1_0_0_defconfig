@@ -1,3 +1,4 @@
+# Copyright (c) 2026 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
 # Enable MPU
@@ -14,3 +15,5 @@ CONFIG_LED_GPIO=y
 
 CONFIG_USE_DT_CODE_PARTITION=y
 CONFIG_BUILD_OUTPUT_UF2=y
+
+# CONFIG_CHARGER_LOG_LEVEL_DBG=y
