@@ -5,6 +5,7 @@ board:
     - name: nrf52840
       variants:
         - name: zmk
+        - name: zmk_debug
   revision:
     format: major.minor.patch
     default: 1.0.0
